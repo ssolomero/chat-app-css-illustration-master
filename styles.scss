@@ -1,0 +1,301 @@
+$pale-violet: hsl(276, 100%, 81%);
+$moderate-violet: hsl(276, 55%, 52%);
+$desaturated-dark-violet: hsl(271, 15%, 43%);
+$grayish-blue: hsl(206, 6%, 79%);
+$very-dark-desaturated-violet: hsl(271, 36%, 24%);
+$dark-grayish-violet: hsl(270, 7%, 64%);
+$light-magenta: hsl(293, 100%, 63%);
+$light-violet: hsl(264, 100%, 61%);
+$light-grayish-violet: hsl(270, 20%, 96%);
+$very-dark-desaturated-violet: hsl(271, 36%, 24%);
+$very-light-magenta: hsl(289, 100%, 72%);
+
+body {
+    font-family: Rubik;
+    overflow-x: hidden;
+}
+
+#dark-bg-rect {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    background-image: linear-gradient($light-magenta, $light-violet 90%);
+    width: 450px;
+    height: 85%;
+    z-index: -1;
+    border-radius: 0 0 250px 250px;
+}
+#light-bg-rect {
+    position: absolute;
+    bottom: 0;
+    right: -200px;
+    background-color: $light-grayish-violet;
+    width: 450px;
+    height: 85%;
+    z-index: -1;
+    border-radius: 250px 250px 0 0;
+}
+
+.container {
+    display: flex;
+    max-width: 960px;
+    margin: auto;
+    margin-top: 80px;
+}
+.container-item {
+    flex: 1;
+    margin: 0 20px;
+}
+
+#phone {
+    background-color: white;
+    max-width: 260px;
+    border-radius: 25px;
+    padding: 12px;
+    box-shadow: 15px 20px 40px hsla(271, 15%, 43%, 0.4);
+    margin: auto;
+}
+#phone-bg {
+    background-color: $light-grayish-violet;
+    border-radius: 25px;
+    padding-bottom: 10px;
+}
+#phone-header {
+    background-image: linear-gradient(to left, $light-magenta, $light-violet 90%);
+    border-radius: 25px 25px 5px 5px;
+    color: $light-grayish-violet;
+    padding: 0 20px 0 20px;
+}
+#phone-bridge {
+    margin: auto;
+    height: 20px;
+    width: 140px;
+    background-color: white;
+    border-radius: 0 0 15px 15px;  
+}
+#header-items {
+    display: flex;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    align-items: center;
+}
+#back-arrow {
+    width: 10px;
+    margin-right: 10px;
+}
+#avatar-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $light-grayish-violet;
+}
+#header-text {
+    margin-left: 10px;
+}
+#header-name {
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin: 0 0 2px 0;
+}
+#header-status {
+    font-weight: 400;
+    font-size: 0.6rem;
+    margin: 0;
+}
+#more-icon {
+    height: 10px;
+    margin-left: auto;
+}
+
+#chat {
+    margin: 0 10px;
+}
+
+.left-chat, .right-chat, .payment, #type-message {
+    margin-top: 10px;
+    padding: 1px 10px;
+    font-size: 0.6rem;
+}
+
+.left-chat {
+    background-color: lavender;
+    color: $moderate-violet;
+    width: 70%; 
+    box-sizing: border-box;
+    border-radius: 15px 15px 15px 5px;
+}
+
+.right-chat {
+    background-color: white;
+    color: $very-dark-desaturated-violet;
+    margin-left: auto;
+    width: 70%;
+    box-sizing: border-box;
+    border-radius: 15px 15px 5px 15px;
+}
+
+.photos {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+    img {
+        width: 50px;
+        border-radius: 12px;
+        margin: 10px 5px 0 0;
+    }
+}
+
+.payment {
+    background-image: linear-gradient(to right, $light-magenta, $light-violet 90%);
+    color: white;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 15px 15px 15px 5px;
+
+    .circle {
+        width: 10px; height: 10px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .amount {
+        font-weight: 700;
+        font-size: 0.8rem;
+        margin-left: auto;
+    }
+}
+
+
+#type-message {
+    margin-top: 20px;;
+    background-color: white;
+    color: lightgray;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+
+    #send {
+        width: 25px; height: 25px;
+        background-color: black;
+        border-radius: 50%;
+        margin-left: auto;
+
+        img {
+            display: block;
+            width: 10px;
+            margin: auto;
+            margin-top: 30%;
+        }        
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);  
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);  
+        opacity: 1;
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);  
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);  
+        opacity: 1;
+    }
+}
+
+#message-1 {
+    animation: 1s ease-out 0s slideInFromLeft both;
+}
+#message-2 {
+    animation: 1s ease-out 0.8s  slideInFromLeft both;
+}
+#message-3 {
+    animation: 1s ease-out 1.6s slideInFromRight both;
+}
+#message-4 {
+    animation: 1s ease-out 2.4s slideInFromRight both;
+}
+#message-5 {
+    animation: 1s ease-out 3.2s slideInFromRight both;
+}
+#message-6 {
+    animation: 1s ease-out 4s slideInFromLeft both;
+}
+#message-7 {
+    animation: 1s ease-out 4.8s slideInFromLeft both;
+}
+#message-8 {
+    animation: 1s ease-out 5.6s slideInFromLeft both;
+}
+
+
+.description {
+    margin-top: 45%;
+    box-sizing: border-box;
+
+    h1 {
+        font-weight: 500;
+        color: $very-dark-desaturated-violet;
+    }
+
+    p {
+        color: $dark-grayish-violet;
+        line-height: 2;
+        font-weight: 400;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 30px; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    .container-item {
+        margin: 0 20%;
+    }
+    .description {
+        margin-top: 75px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    #light-bg-rect {
+        bottom: -50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-item {
+        margin: 0 5%;
+    }
+    #dark-bg-rect {
+        width: 100%;
+        left: -50%;
+    }
+    #light-bg-rect {
+        width: 100%;
+        right: -50%;
+        bottom: -50%;
+    }
+}
